@@ -100,9 +100,19 @@ figcaption {
     margin-top: 0.5rem;
 }
 
+.carousel-item img {
+    width: 100%;
+    /* Ensures the image fills the width of the container */
+    height: 21rem;
+    /* Set a fixed height for the images */
+    object-fit: cover;
+    /* Ensures the image is cropped and maintains its aspect ratio */
+}
+
 @media (max-width: 768px) {
-    .carousel {
+    .carousel-item img {
         width: 95%;
+        height: 21rem;
     }
 }
 
@@ -112,6 +122,7 @@ figcaption {
         max-width: 80%;
     }
 }
+
 
 /* Page header bars  */
 
@@ -458,5 +469,91 @@ a i {
         /* Stack the items vertically */
         gap: 20px;
         /* Adjust space between items if needed */
+    }
+}
+
+.timeline-flexbox {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid blue; */
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    /* border: 3px solid green; */
+    gap: 1rem;
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    /* border: 2px solid red; */
+    gap: 60px;
+    position: relative;
+    align-items: top;
+}
+
+.timeline-date {
+    width: 200px;
+    text-align: right;
+    /* border: 2px solid blue; */
+}
+
+.timeline-text {
+    width:60%;
+    /* border: 2px solid yellow; */
+}
+
+.timeline-line {
+    position: absolute;
+    left: 228px;
+    width: 3px;
+    height: 100%;
+    background-color: #272040;
+    z-index: 1;
+}
+
+.timeline-circle {
+    position: absolute;
+    left: 222.6px;
+    margin-top: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #3B8C41;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        gap: 1.5rem
+    }
+
+    .timeline-item {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem
+    }
+
+    .timeline-date {
+        width: 100%;
+        margin-left: 50px;
+        text-align: left;
+    }
+
+    .timeline-text {
+        margin-left: 50px;
+        width:85%
+    }
+
+    .timeline-line {
+        left: 23px;
+    }
+
+    .timeline-circle {
+        left: 18px;
     }
 }
