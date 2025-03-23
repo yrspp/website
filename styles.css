@@ -419,13 +419,13 @@ a i {
     align-items: center;
     justify-content: center;
     display: flex;
-    gap: 5px;
+    gap: 0px;
     /* border: 2px solid blue; */
 }
 
 .socials-box-item {
     height: 90%;
-    width: 118px;
+    width: 117px;
     text-align: center;
     /* border: 2px solid red; */
 }
@@ -463,7 +463,7 @@ a i {
 
 
 /* Media query for small screens */
-@media (max-width: 270px) {
+@media (max-width: 400px) {
     .socials-box-outer {
         flex-direction: column;
         /* Stack the items vertically */
