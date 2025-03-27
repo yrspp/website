@@ -474,7 +474,8 @@ a i {
     .committee-item {
         width: 65%;
     }
-    .committee{
+
+    .committee {
         row-gap: 2.5rem;
     }
 }
