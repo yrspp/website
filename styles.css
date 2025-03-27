@@ -31,7 +31,7 @@ p,
 h3 {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
-    text-wrap: pretty;
+    /* text-wrap: pretty; */
 }
 
 h1,
