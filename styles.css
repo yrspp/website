@@ -27,6 +27,12 @@
 }
 
 /* Headings */
+p,
+h3 {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem
+}
+
 h1,
 h2,
 h3 {
@@ -291,8 +297,13 @@ a i {
     color: white;
 }
 
+.email-btn {
+    text-decoration: underline;
+}
+
 .email-btn:hover {
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .custom-title {
@@ -539,7 +550,7 @@ a i {
 .timeline-date {
     width: 200px;
     text-align: right;
-    /* border: 2px solid blue; */
+    /* border: 2px solid orange; */
 }
 
 .timeline-text {
@@ -580,7 +591,6 @@ a i {
     }
 
     .timeline-date {
-        width: 100%;
         margin-left: 50px;
         text-align: left;
     }
