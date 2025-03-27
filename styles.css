@@ -80,7 +80,7 @@ body {
 }
 
 small {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
     /* Adjust the font size as needed */
 }
 
@@ -329,13 +329,16 @@ a i {
 }
 
 .nav-link {
-    color: #352D58;}
+    color: #352D58;
+}
+
 .navbar-custom .nav-link.active,
 .navbar-custom .nav-link.active:hover {
     color: #272040;
     font-weight: bold;
 
 }
+
 .navbar-nav {
     display: flex;
     text-align: right;
@@ -399,9 +402,81 @@ a i {
 
 .socials-box-item {
     height: 90%;
-    width: 117px;
+    width: 93px;
     text-align: center;
     /* border: 2px solid red; */
+}
+
+@media (max-width: 295px) {
+    .socials-box-outer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Committee box */
+
+
+.committee-box-outer {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid blue; */
+}
+
+.committee {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 98%;
+    /* border: 3px solid green; */
+    column-gap: 2rem;
+    row-gap: 3rem;
+    position: relative;
+}
+
+.committee-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 30%;
+    gap: 0.5rem;
+}
+
+.committee-image {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 50%
+}
+
+.committee-name {
+    text-align: center;
+    font-size: 0.9rem;
+    /* border: 2px solid orange; */
+}
+
+.committee-text {
+    text-align: center;
+    font-size: 0.8rem;
+    /* border: 2px solid yellow; */
+}
+
+@media(max-width:908px) {
+    .committee-item {
+        width: 45%
+    }
+}
+
+@media(max-width:620px) {
+    .committee-item {
+        width: 65%;
+    }
+    .committee{
+        row-gap: 2.5rem;
+    }
 }
 
 /* Sponsors box */
@@ -435,16 +510,7 @@ a i {
     width: 6rem;
 }
 
-
-/* Media query for small screens */
-@media (max-width: 400px) {
-    .socials-box-outer {
-        flex-direction: column;
-        /* Stack the items vertically */
-        gap: 20px;
-        /* Adjust space between items if needed */
-    }
-}
+/* Timeline */
 
 .timeline-flexbox {
     display: flex;
