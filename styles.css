@@ -30,7 +30,8 @@
 p,
 h3 {
     margin-left: 0.3rem;
-    margin-right: 0.3rem
+    margin-right: 0.3rem;
+    text-wrap: pretty;
 }
 
 h1,
@@ -48,6 +49,7 @@ h2 {
     font-size: 1.875em;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
+    text-wrap: pretty;
 }
 
 h3 {
