@@ -28,13 +28,15 @@
 
 /* Headings */
 p,
-h3 {
+h3,
+h4 {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
     /* text-wrap: pretty; */
 }
-p{
-    font-size:0.9rem;
+
+p {
+    font-size: 0.9rem;
 }
 
 h1,
@@ -46,6 +48,8 @@ h3 {
 
 h1 {
     font-size: 2.8em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 h2 {
@@ -432,7 +436,6 @@ a i {
 
 /* Committee box */
 
-
 .committee-box-outer {
     display: flex;
     justify-content: center;
@@ -464,7 +467,7 @@ a i {
     height: 10rem;
     width: 10rem;
     object-fit: cover;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     border-radius: 50%
 }
 
@@ -496,36 +499,236 @@ a i {
     }
 }
 
+/* Keynote speakers main page*/
+
+.speakers-box-outer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* border: 2px solid blue; */
+    row-gap: 2rem;
+}
+
+.speakers-item {
+    position: relative;
+    /* border: 2px solid red; */
+    width: 15rem;
+    height: 18rem;
+}
+
+.speakers-image {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.speakers-textbox {
+    display: flex;
+    margin-top: 1rem;
+    /* border: 2px solid grey; */
+    row-gap: .3rem;
+    flex-direction: column
+}
+
+.speakers-name,
+.speakers-position {
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    /* border: 2px solid orange; */
+}
+
+.speakers-position {
+    font-weight: normal;
+    font-size: 0.7rem
+}
+
+.speakers-text {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-wrap: balance;
+    /* border: 2px solid yellow; */
+}
+
+
+.speakers-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 2px solid #352D58;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.speakers-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background: #ffffff;
+    color: #272040;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #352D58;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.speakers-item:hover .speakers-card-front {
+    opacity: 0;
+}
+
+.speakers-item:hover .speakers-card-back {
+    opacity: 1;
+}
+
+
+
+/* @media(max-width:908px) {
+    .speakers-box-outer {
+        flex-direction: column;
+    }
+
+    .speakers-item {
+        width: 100%
+    }
+} */
+
+/*
+@media(max-width:620px) {
+    .speakers-item {
+        width: 65%;
+    }
+
+    .speakers {
+        row-gap: 2.5rem;
+    } 
+}*/
+
+
+/* Keynote speakers detail page */
+.speakers-detail-box-outer {
+    display: flex;
+    justify-content: left;
+    /* border: 2px solid blue; */
+    gap: 2rem;
+}
+
+.speakers-detail-item {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    /* border: 2px solid red; */
+    gap: 1rem;
+    width: 50%
+}
+
+.speakers-detail-image {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+}
+
+.speakers-detail-textbox {
+    display: flex;
+    margin-top: 1rem;
+    /* border:2px solid grey; */
+    gap: 0.5rem;
+    flex-direction: column
+}
+
+.speakers-detail-name {
+    text-align: left;
+    font-size: 0.9rem;
+    /* border: 2px solid orange; */
+}
+
+.speakers-detail-text {
+    text-align: left;
+    font-size: 0.8rem;
+    /* border: 2px solid yellow; */
+}
+
+@media(max-width:908px) {
+    .speakers-detail-box-outer {
+        flex-direction: column;
+    }
+
+    .speakers-detail-item {
+        width: 100%
+    }
+}
+
+
 /* Sponsors box */
 .sponsors-container {
     display: flex;
     justify-content: center;
-    /* border: 2px solid black; */
+    border: 2px solid black;
+    margin-bottom: 10%;
+    margin-top: 2.5rem
 }
 
 .sponsors-box-outer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
     justify-content: center;
     column-gap: 3em;
-    row-gap: 1em;
-    width: 90%;
-    /* border: 2px solid blue; */
+    row-gap: 1%;
+
+    border: 2px solid blue;
 }
 
-.sponsors-box-item {
+.sponsors-box-item-1 {
     justify-content: center;
-    /* border: 2px solid red; */
+    /* background-color:red; */
+    border: 2px solid red;
+    width: 70%;
 }
 
-.sponsorlogo-2 {
-    width: 15rem;
+.sponsors-box-item-2 {
+    justify-content: center;
+    /* background-color:red; */
+    border: 2px solid red;
+    width: 38%;
 }
 
-.sponsorlogo-3 {
-    width: 6rem;
+.sponsors-box-item-3 {
+    justify-content: center;
+    /* background-color:red; */
+    border: 2px solid red;
+    width: 13%;
 }
+
+.sponsorlogo {
+    width: 100%;
+    justify-content:center;
+}
+
+.sponsor-size-up {
+    width: 120%
+}
+
+@media (max-width: 700px) {
+    .sponsors-box-outer {
+        width:100%
+}}
+
 
 /* Timeline */
 
@@ -592,7 +795,7 @@ a i {
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem
+        gap: 0rem
     }
 
     .timeline-date {
