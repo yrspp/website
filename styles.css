@@ -33,6 +33,9 @@ h3 {
     margin-right: 0.3rem;
     /* text-wrap: pretty; */
 }
+p{
+    font-size:0.9rem;
+}
 
 h1,
 h2,
