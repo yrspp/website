@@ -1,24 +1,28 @@
 @font-face {
-    font-family: "Sora";
+    font-family: 'Sora';
     font-weight: normal;
     src: url("./fonts/sora/Sora-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Sora";
+    font-family: 'Sora';
     font-weight: bold;
     src: url("./fonts/sora/Sora-SemiBold.ttf");
 }
 
 @font-face {
-    font-family: "Magistralbold";
+    font-family: 'Magistralbold';
     src: url("./fonts/magistral/Magistral-Bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Magistralblack";
+    font-family: 'Magistralblack';
     src: url("./fonts/magistral/Magistral-Black.otf") format("opentype");
 }
+
+  body {
+    font-family: Open Sans, sans-serif; /*Fallback*/
+  }
 
 /* Borders for testing */
 .borderbox {
