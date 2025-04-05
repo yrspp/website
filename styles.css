@@ -2,7 +2,6 @@
     font-family: "Sora";
     font-weight: normal;
     src: url("./fonts/sora/Sora-Regular.ttf");
-
 }
 
 @font-face {
@@ -27,15 +26,8 @@
 }
 
 /* Headings */
-p,
-h3,
-h4 {
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-    /* text-wrap: pretty; */
-}
 
-p {
+p, li {
     font-size: 0.9rem;
 }
 
@@ -50,18 +42,23 @@ h1 {
     font-size: 2.8em;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
+    margin-left: -2px;
+    margin-right: -2px;
+    color: white
 }
 
 h2 {
-    font-size: 1.875em;
+    font-size: 2em;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     text-wrap: pretty;
+    margin-left: -1px;
+    margin-right: -1px;
 }
 
 h3 {
-    font-size: 1.2em;
-    margin-top: 1em
+    font-size: 1.5em;
+    margin-top: 1em;
 }
 
 h4,
@@ -96,7 +93,6 @@ body {
 
 small {
     font-size: 0.55rem;
-    /* Adjust the font size as needed */
 }
 
 /* Images */
@@ -111,17 +107,13 @@ figure {
 figcaption {
     font-size: 0.9rem;
     color: #352D58;
-    /* Choose a color */
     margin-top: 0.5rem;
 }
 
 .carousel-item img {
     width: 100%;
-    /* Ensures the image fills the width of the container */
     height: 21rem;
-    /* Set a fixed height for the images */
     object-fit: cover;
-    /* Ensures the image is cropped and maintains its aspect ratio */
 }
 
 @media (max-width: 768px) {
@@ -168,7 +160,7 @@ figcaption {
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .header-textbox {
@@ -188,7 +180,6 @@ figcaption {
     z-index: 2;
     padding: 0rem;
     margin-block: 1rem;
-    /* border: 2px solid blue; */
 }
 
 /* Front page logo */
@@ -196,7 +187,6 @@ figcaption {
 .title-logo {
     width: 80%;
     padding-left: 3%;
-    /* border: 2px solid blue; */
 }
 
 @media (max-width: 768px) {
@@ -217,6 +207,8 @@ figcaption {
 
 .container-sm {
     max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px
 }
 
 .image-rounded {
@@ -230,7 +222,6 @@ figcaption {
     grid-template-columns: 1fr 1fr;
     /* Create 2 equal-width columns */
     column-gap: 40px;
-    /* Adjust the gap between the columns */
 }
 
 
@@ -263,7 +254,6 @@ figcaption {
 
 a {
     text-decoration: none;
-    /* Removes underline */
     color: #272040;
 }
 
@@ -273,7 +263,6 @@ a i {
 
 .bi {
     font-size: 24px;
-    /* Works for Bootstrap icons */
 }
 
 /* Buttons */
@@ -306,13 +295,8 @@ a i {
     color: white;
 }
 
-.email-btn {
-    text-decoration: underline;
-}
-
 .email-btn:hover {
     text-decoration: underline;
-    font-weight: bold;
 }
 
 .custom-title {
@@ -331,6 +315,7 @@ a i {
     background-color: #352D58;
     color: white;
     border: none;
+    font-size:0.9rem;
 }
 
 .navbar-btn:hover {
@@ -338,15 +323,7 @@ a i {
     color: white;
 }
 
-.navbar-brand img {
-    height: 1rem;
-    height: auto;
-}
 
-.navbar-brand {
-    display: flex;
-    margin-left: 0.5rem;
-}
 
 .nav-link {
     color: #352D58;
@@ -377,13 +354,13 @@ a i {
     margin-left: auto;
 }
 
-.custom-toggler .navbar-toggler-icon {
+.navbar-toggler-custom .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath stroke='%23352D58' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     transition: all 0.3s ease-in-out;
 
 }
 
-.custom-toggler.open .navbar-toggler-icon {
+.navbar-toggler-custom.open .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath stroke='%23352D58' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M6 6L26 26M26 6L6 26'/%3E%3C/svg%3E");
 }
 
@@ -399,7 +376,6 @@ a i {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-    /* Footer height */
 }
 
 /* Social media box */
@@ -504,9 +480,10 @@ a i {
 .speakers-box-outer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     /* border: 2px solid blue; */
-    row-gap: 2rem;
+    row-gap: 1.5rem;
+    column-gap: 3vw;
 }
 
 .speakers-item {
@@ -672,62 +649,104 @@ a i {
     }
 }
 
-
 /* Sponsors box */
-.sponsors-container {
+
+.sponsors-container-borders {
     display: flex;
-    justify-content: center;
-    border: 2px solid black;
-    margin-bottom: 10%;
-    margin-top: 2.5rem
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    row-gap: 1rem
 }
 
-.sponsors-box-outer {
+.sponsors-box-outer-borders {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
     justify-content: center;
     column-gap: 3em;
-    row-gap: 1%;
-
-    border: 2px solid blue;
+    row-gap: 1em;
+    width: 80%;
+    /* border: 2px solid blue; */
 }
 
-.sponsors-box-item-1 {
+.sponsors-box-item-borders {
     justify-content: center;
-    /* background-color:red; */
-    border: 2px solid red;
-    width: 70%;
+    border: 2px solid #352D58;
+    border-radius: 10px;
+    max-width: 100%
 }
 
-.sponsors-box-item-2 {
-    justify-content: center;
-    /* background-color:red; */
-    border: 2px solid red;
-    width: 38%;
+.rounded {
+    border-radius: 10px
 }
 
-.sponsors-box-item-3 {
+.sponsors-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    /* border: 2px solid black; */
+}
+
+.sponsors-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
     justify-content: center;
-    /* background-color:red; */
-    border: 2px solid red;
-    width: 13%;
+    column-gap: 2em;
+    /* border: 2px solid green; */
+}
+
+.sponsors-box-item {
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.rounded {
+    border-radius: 10px
 }
 
 .sponsorlogo {
-    width: 100%;
-    justify-content:center;
+    width: auto;
+    max-width: 100%;
 }
 
-.sponsor-size-up {
-    width: 120%
+.tier2 .sponsorlogo {
+    max-height: 10rem;
 }
+
+.tier3 .sponsorlogo {
+    max-height: 6.5rem;
+
+}
+
+.tier4 .sponsorlogo {
+    max-height: 4rem;
+}
+
+.sponsorlogo-4 {
+    max-height: 4rem;
+}
+
 
 @media (max-width: 700px) {
-    .sponsors-box-outer {
-        width:100%
-}}
+    .sponsors-box {
+        width: 85%;
+    }
+
+    /* .tier2 .sponsorlogo {
+        max-width: 90%
+    }
+
+    .tier3 .sponsorlogo {
+        max-width: 80%
+    }
+
+    .tier4 .sponsorlogo{
+        max-width: 80%
+    } */
+}
 
 
 /* Timeline */
@@ -768,7 +787,9 @@ a i {
 
 .timeline-line {
     position: absolute;
+    /* H: modified to use translate by 50%, this is useful for centering things. I did this on the circle as well */
     left: 228px;
+    transform: translate(-50%);
     width: 3px;
     height: 100%;
     background-color: #272040;
@@ -777,7 +798,8 @@ a i {
 
 .timeline-circle {
     position: absolute;
-    left: 222.6px;
+    left: 228px;
+    transform: translate(-50%);
     margin-top: 5px;
     width: 14px;
     height: 14px;
@@ -810,9 +832,11 @@ a i {
 
     .timeline-line {
         left: 23px;
+        transform: translate(-50%);
     }
 
     .timeline-circle {
-        left: 18px;
+        left: 23px;
+        transform: translate(-50%);
     }
 }
