@@ -20,9 +20,10 @@
     src: url("./fonts/magistral/Magistral-Black.otf") format("opentype");
 }
 
-  body {
-    font-family: Open Sans, sans-serif; /*Fallback*/
-  }
+body {
+    font-family: Open Sans, sans-serif;
+    /*Fallback*/
+}
 
 /* Borders for testing */
 .borderbox {
@@ -31,7 +32,9 @@
 
 /* Headings */
 
-p, li {
+p,
+.btn,
+li {
     font-size: 0.9rem;
 }
 
@@ -43,18 +46,20 @@ h3 {
 }
 
 h1 {
-    font-size: 2.8em;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    color: #352D58;
+    margin-top: 5.5vh;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
     margin-left: -2px;
     margin-right: -2px;
-    color: white
 }
 
+
+
 h2 {
-    font-size: 2em;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
     text-wrap: pretty;
     margin-left: -1px;
     margin-right: -1px;
@@ -175,6 +180,10 @@ figcaption {
     /* border: 2px solid red; */
 }
 
+.header-textbox h1 {
+    color: white;
+}
+
 .title-box-outer {
     width: 80%;
 }
@@ -273,7 +282,7 @@ a i {
 
 .custom-btn,
 .custom-btn-light {
-    margin-top: 0.25rem;
+    margin-top: 0.75rem;
     margin-bottom: 1rem;
 }
 
@@ -299,8 +308,15 @@ a i {
     color: white;
 }
 
-.email-btn:hover {
+.underline-btn {
     text-decoration: underline;
+    text-underline-offset: 1.5px;
+    text-decoration-thickness: 0.5px;
+}
+
+.underline-btn:hover {
+    text-decoration-thickness: 1.2px;
+
 }
 
 .custom-title {
@@ -319,7 +335,7 @@ a i {
     background-color: #352D58;
     color: white;
     border: none;
-    font-size:0.9rem;
+    font-size: 0.9rem;
 }
 
 .navbar-btn:hover {
@@ -843,4 +859,9 @@ a i {
         left: 23px;
         transform: translate(-50%);
     }
+}
+
+
+#committee {
+    scroll-margin-top: 70px;
 }
