@@ -31,8 +31,8 @@
 }
 
 
-#organise:target {
-    padding-top: 50px;
+#organise:target, #contribute:target {
+    padding-top: 150px;
 }
 
 /* BODY TEXT */
