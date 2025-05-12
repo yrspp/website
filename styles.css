@@ -912,15 +912,23 @@ a i {
     /* border: 2px solid yellow; */
 }
 
-.timeline-line {
+.timeline-line, .timeline-line-dashed {
     position: absolute;
     left: 228px;
     transform: translate(-50%);
-    width: 3px;
+    width: 2.8px;
     height: 100%;
     /* dark purple */
-    background-color: #272040;
+    background-color: #352d58;
     z-index: 1;
+}
+
+.timeline-line-dashed {
+    bottom: 0px;
+    height: 20%;
+    /* dark purple */
+    background-color: white;
+    border-style: dashed
 }
 
 .timeline-circle {
@@ -931,7 +939,8 @@ a i {
     width: 14px;
     height: 14px;
     /* dark purple */
-    background-color: #272040;
+    background-color: white;
+    border: solid 2.8px #352d58;
     border-radius: 50%;
     z-index: 2;
 }
@@ -958,7 +967,8 @@ a i {
         width: 85%
     }
 
-    .timeline-line {
+    .timeline-line,
+    .timeline-line-dashed {
         left: 23px;
         transform: translate(-50%);
     }
