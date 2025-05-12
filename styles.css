@@ -1,28 +1,49 @@
+/* FONTS */
+
 @font-face {
     font-family: 'Sora';
-    font-weight: normal;
+    font-weight: 300;
+    src: url("./fonts/sora/Sora-Light.ttf");
+}
+
+@font-face {
+    font-family: 'Sora';
+    font-weight: 400;
     src: url("./fonts/sora/Sora-Regular.ttf");
 }
 
 @font-face {
     font-family: 'Sora';
-    font-weight: bold;
+    font-weight: 600;
     src: url("./fonts/sora/Sora-SemiBold.ttf");
 }
 
 @font-face {
-    font-family: 'Magistralbold';
+    font-family: 'Magistral';
+    font-weight: 700;
     src: url("./fonts/magistral/Magistral-Bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'Magistralblack';
+    font-family: 'Magistral';
+    font-weight: 900;
     src: url("./fonts/magistral/Magistral-Black.otf") format("opentype");
 }
+
+/* BODY TEXT */
 
 body {
     font-family: Open Sans, sans-serif;
     /*Fallback*/
+}
+
+body {
+    font-family: Sora;
+    color: #333333;
+}
+
+small {
+    font-size: 0.55rem;
 }
 
 /* Borders for testing */
@@ -35,72 +56,62 @@ body {
 p,
 .btn,
 li {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 h1,
-h2,
-h3 {
-    font-family: Magistralbold;
-    color: #352D58;
+h2 {
+    font-family: Magistral;
 }
 
 h1 {
-    color: #352D58;
     margin-top: 5.5vh;
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
     margin-left: -2px;
     margin-right: -2px;
+    /* standard purple */
+    color: #352D58;
+    text-wrap: pretty;
 }
-
-
 
 h2 {
     font-size: 1.8rem;
-    margin-top: 2rem;
+    margin-top: 4vh;
     margin-bottom: 0.5rem;
-    text-wrap: pretty;
     margin-left: -1px;
     margin-right: -1px;
+    /* standard purple */
+    color: #352D58;
+    text-wrap: pretty;
 }
 
 h3 {
-    font-size: 1.4em;
-    margin-top: 1em;
-}
-
-h4,
-h5 {
-    font-family: Sora;
-    color: #352D58;
     font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    /* standard purple */
+    color: #352D58
 }
 
 h4 {
-    font-size: 0.9em;
-}
-
-h5 {
-    font-size: 1em;
+    font-size: 1rem;
+    color: red;
+    font-family: Sora;
+    font-weight: bold;
     text-align: center;
     margin-left: 3em;
     margin-right: 3em;
+    text-wrap: balance;
+
     margin-top: 1.8em;
     margin-bottom: 0.8rem;
 }
 
-/* Body text */
-body {
-    font-family: Sora;
-    color: #272040;
-    background: white;
-    text-align: left;
-    font-size: 100%;
-}
-
-small {
-    font-size: 0.55rem;
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2rem;
+    }
 }
 
 /* Images */
@@ -114,7 +125,6 @@ figure {
 
 figcaption {
     font-size: 0.9rem;
-    color: #352D58;
     margin-top: 0.5rem;
 }
 
@@ -124,7 +134,7 @@ figcaption {
     object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .carousel-item img {
         width: 95%;
         height: 21rem;
@@ -132,7 +142,7 @@ figcaption {
 }
 
 /* When screen size is 600px or smaller */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .img-fluid {
         max-width: 80%;
     }
@@ -197,11 +207,11 @@ figcaption {
 /* Front page logo */
 
 .title-logo {
-    width: 80%;
+    width: 600px;
     padding-left: 3%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .title-logo {
         width: 95%;
     }
@@ -266,6 +276,7 @@ figcaption {
 
 a {
     text-decoration: none;
+    /* dark purple */
     color: #272040;
 }
 
@@ -286,40 +297,68 @@ a i {
 }
 
 .custom-btn {
-    background-color: #352D58;
+    /* bright purple */
+    background-color: #3F3669;
     color: white;
     border: none;
+    font-weight: bold
 }
 
 .custom-btn:hover {
+    /* dark purple */
     background-color: #272040;
     color: white;
 }
 
 .custom-btn-light {
-    border: 1px solid #352D58;
-    color: #352D58;
+    /* bright purple */
+    border: 1px solid #3F3669;
+    /* bright purple */
+    color: #3F3669;
 }
 
 .custom-btn-light:hover {
-    background-color: #352D58;
-    border: 1px solid #352D58;
+    /* bright purple */
+    background-color: #3F3669;
+    /* bright purple */
+    border: 1px solid #3F3669;
     color: white;
 }
 
-.underline-btn {
+.underline-text,
+.underline-text-light,
+.underline-btn,
+.underline-btn-light {
+    font-weight: bold;
     text-decoration: underline;
     text-underline-offset: 1.5px;
     text-decoration-thickness: 0.5px;
 }
 
-.underline-btn:hover {
-    text-decoration-thickness: 1.2px;
+.underline-text {
+    color: #3F3669;
+    /* bright purple */
+}
 
+/* Hover on underline text / buttons should be thicker underline */
+.underline-text:hover,
+.underline-text-light:hover,
+.underline-btn:hover,
+.underline-btn-light:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1.2px;
+}
+
+/* Light button/text should be light */
+.underline-text-light,
+.underline-btn-light {
+    /* light purple */
+    color: #dedbf5;
 }
 
 .custom-title {
-    font-family: Magistralblack;
+    font-family: Magistral;
+    /* standard purple */
     color: #352D58;
     font-size: 1.2em;
     margin-top: 6.5em;
@@ -331,28 +370,38 @@ a i {
 }
 
 .navbar-btn {
-    background-color: #352D58;
+    /* bright purple */
+    background-color: #3F3669;
     color: white;
     border: none;
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
+    /* border: solid yellow 1.5pt; */
 }
 
 .navbar-btn:hover {
     background-color: #3B8C41;
-    color: white;
+    color: white
 }
 
-
+@media (max-width: 767px) {
+    .navbar-btn {
+        margin-bottom: 0.4rem;
+        margin-top: 0.4rem;
+    }
+}
 
 .nav-link {
-    color: #352D58;
+    /* dark purple */
+    color: #272040;
+    /* border: solid red 1pt; */
+
 }
 
 .navbar-custom .nav-link.active,
 .navbar-custom .nav-link.active:hover {
+    /* dark purple */
     color: #272040;
     font-weight: bold;
-
 }
 
 .navbar-nav {
@@ -360,6 +409,7 @@ a i {
     text-align: right;
     flex-direction: column;
     margin-right: 1em;
+    /* border: solid orange 1pt; */
 }
 
 .navbar-custom .nav-link:hover {
@@ -371,11 +421,13 @@ a i {
     outline: none;
     box-shadow: none;
     margin-left: auto;
+    /* border: solid blue 1pt; */
 }
 
 .navbar-toggler-custom .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath stroke='%23352D58' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
+    /* border: solid green 1pt; */
 
 }
 
@@ -399,13 +451,63 @@ a i {
 
 /* Social media box */
 
-.socials-container {
+/* .socials-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    /* border: 2px solid black; */
+    border: 2px solid black;
+} */
+
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+    flex-wrap: wrap;
+    max-width: 80%;
 }
+
+@media(max-width:260px) {
+    .icon-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.icon-travel {
+    width: 30px;
+    margin-right: 6px;
+    margin-left: -3px
+}
+
+.icon-circle {
+    max-width: 40px;
+    height: auto;
+}
+
+.custom-footer {
+    /* standard purple */
+    background-color: #352D58;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vh;
+}
+
+.footer-heading {
+    color: white;
+    margin-top: 6vh
+}
+
+.footer-body {
+    text-wrap: pretty;
+    color: white;
+}
+
+/* CUT BELOW */
 
 .socials-box-outer {
     align-items: center;
@@ -422,12 +524,9 @@ a i {
     /* border: 2px solid red; */
 }
 
-@media (max-width: 295px) {
-    .socials-box-outer {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
+/* CUT ABOVE */
+
+
 
 /* Committee box */
 
@@ -560,7 +659,8 @@ a i {
     align-items: center;
     justify-content: center;
     background: white;
-    border: 2px solid #352D58;
+    /* dark purple */
+    border: 2px solid #272040;
     border-radius: 10px;
     transition: opacity 0.5s ease-in-out;
 }
@@ -573,10 +673,12 @@ a i {
     align-items: top;
     justify-content: center;
     background: #ffffff;
+    /* dark purple */
     color: #272040;
     text-align: center;
     border-radius: 10px;
-    border: 2px solid #352D58;
+    /* dark purple */
+    border: 2px solid #272040;
     opacity: 0;
     transition: opacity 0.15s ease-in-out;
 }
@@ -691,6 +793,7 @@ a i {
 
 .sponsors-box-item-borders {
     justify-content: center;
+    /* standard purple */
     border: 2px solid #352D58;
     border-radius: 10px;
     max-width: 100%
@@ -704,7 +807,7 @@ a i {
     display: flex;
     align-items: center;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 2rem;
     /* border: 2px solid black; */
 }
 
@@ -713,7 +816,8 @@ a i {
     flex-wrap: wrap;
     align-items: start;
     justify-content: center;
-    column-gap: 2em;
+    column-gap: 1rem;
+    row-gap: 1rem;
     /* border: 2px solid green; */
 }
 
@@ -731,8 +835,12 @@ a i {
     max-width: 100%;
 }
 
+.tier1 .sponsorlogo {
+    max-height: 13.2rem;
+}
+
 .tier2 .sponsorlogo {
-    max-height: 10rem;
+    max-height: 9rem;
 }
 
 .tier3 .sponsorlogo {
@@ -806,11 +914,11 @@ a i {
 
 .timeline-line {
     position: absolute;
-    /* H: modified to use translate by 50%, this is useful for centering things. I did this on the circle as well */
     left: 228px;
     transform: translate(-50%);
     width: 3px;
     height: 100%;
+    /* dark purple */
     background-color: #272040;
     z-index: 1;
 }
@@ -819,15 +927,16 @@ a i {
     position: absolute;
     left: 228px;
     transform: translate(-50%);
-    margin-top: 5px;
+    margin-top: 4px;
     width: 14px;
     height: 14px;
+    /* dark purple */
     background-color: #272040;
     border-radius: 50%;
     z-index: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .timeline {
         gap: 1.5rem
     }
