@@ -30,8 +30,12 @@
     src: url("./fonts/magistral/Magistral-Black.otf") format("opentype");
 }
 
-/* BODY TEXT */
 
+#organise:target {
+    padding-top: 50px;
+}
+
+/* BODY TEXT */
 body {
     font-family: Open Sans, sans-serif;
     /*Fallback*/
