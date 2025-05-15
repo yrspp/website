@@ -30,7 +30,8 @@
     src: url("./fonts/magistral/Magistral-Black.otf") format("opentype");
 }
 
-#organise:target, #contribute:target {
+#organise:target,
+#contribute:target {
     padding-top: 150px;
 }
 
@@ -87,6 +88,8 @@ h2 {
     /* standard purple */
     color: #352D58;
     text-wrap: pretty;
+    scroll-margin-top: 50px;
+
 }
 
 h3 {
@@ -915,7 +918,8 @@ a i {
     /* border: 2px solid yellow; */
 }
 
-.timeline-line, .timeline-line-dashed {
+.timeline-line,
+.timeline-line-dashed {
     position: absolute;
     left: 228px;
     transform: translate(-50%);
