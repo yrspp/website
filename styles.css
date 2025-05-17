@@ -486,6 +486,7 @@ a i {
     height: auto;
 }
 
+
 .custom-footer {
     /* standard purple */
     background-color: #352D58;
@@ -599,15 +600,15 @@ a i {
     flex-wrap: wrap;
     justify-content: center;
     /* border: 2px solid blue; */
-    row-gap: 1.5rem;
+    row-gap: 3vw;
     column-gap: 3vw;
 }
 
 .speakers-item {
     position: relative;
-    /* border: 2px solid red; */
-    width: 15rem;
-    height: 18rem;
+    width: 400px;
+    height: 325px;
+    
 }
 
 .speakers-image {
@@ -615,36 +616,55 @@ a i {
     width: 10rem;
     object-fit: cover;
     border-radius: 50%;
+    margin-top:20px;
 }
 
 .speakers-textbox {
     display: flex;
     margin-top: 1rem;
-    /* border: 2px solid grey; */
-    row-gap: .3rem;
+    row-gap: 0;
     flex-direction: column
 }
 
 .speakers-name,
-.speakers-position {
+.speakers-position,
+.speakers-uni,
+.speakers-country {
     text-align: center;
     margin: 0;
     font-weight: bold;
-    /* border: 2px solid orange; */
+}
+
+.speakers-name {
+    margin-bottom: 3px;
 }
 
 .speakers-position {
     font-weight: normal;
-    font-size: 0.7rem
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.speakers-uni {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+    /* color: green; */
+}
+
+.speakers-country {
+    font-size: 0.75rem;
+    font-weight: normal;
+    /* color: blue; */
 }
 
 .speakers-text {
-    text-align: center;
+    text-align: left;
+    color: #333333;
     font-size: 0.8rem;
-    font-weight: bold;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-    text-wrap: balance;
+    font-weight: normal;
+    margin: 1rem;
+    text-wrap: pretty;
     /* border: 2px solid yellow; */
 }
 
@@ -656,7 +676,7 @@ a i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     background: white;
     /* dark purple */
     border: 2px solid #272040;
