@@ -606,8 +606,9 @@ a i {
 
 .speakers-item {
     position: relative;
-    width: 400px;
-    height: 325px;
+    /* border: 2px solid red; */
+    width: 25rem;
+    height: 20rem;
     
 }
 
@@ -616,12 +617,13 @@ a i {
     width: 10rem;
     object-fit: cover;
     border-radius: 50%;
-    margin-top:20px;
+    margin-top:15px;
 }
 
 .speakers-textbox {
     display: flex;
     margin-top: 1rem;
+    /* border: 2px solid grey; */
     row-gap: 0;
     flex-direction: column
 }
