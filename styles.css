@@ -64,7 +64,7 @@ h2 {
 }
 
 h1 {
-    margin-top: 5.5vh;
+    margin-top: 6.5vh;
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
     margin-left: -2px;
@@ -526,7 +526,78 @@ a i {
 
 /* CUT ABOVE */
 
+/* Keynote speakers*/
+.keynote-container {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
 
+.keynote-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    position: relative;
+    /* border: 1px solid orange; */
+}
+
+.keynote-item {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+    align-items: center;
+    padding: 18px;
+}
+
+@media(max-width:690px) {
+    .keynote-box {
+        width: 90%
+    }
+
+    .keynote-item {
+        width: 100%;
+    }
+}
+
+.keynote-image {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    /* margin-bottom: 0.5rem; */
+    border-radius: 50%
+}
+
+.keynote-name {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    /* border: 2px solid red; */
+}
+
+.keynote-title {
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-wrap: balance;
+    margin-bottom: 12px;
+    /* border: 2px solid red; */
+}
+
+.keynote-bio {
+    font-size: 0.8rem;
+    text-wrap: pretty;
+    /* border: 2px solid red */
+}
+
+.keynote-website {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 5px;
+}
 
 /* Committee box */
 
@@ -540,11 +611,10 @@ a i {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 98%;
-    /* border: 3px solid green; */
-    column-gap: 2rem;
-    row-gap: 3rem;
+    column-gap: 1rem;
+    row-gap: 2rem;
     position: relative;
+    /* border: 2px solid green; */
 }
 
 .committee-item {
@@ -553,27 +623,38 @@ a i {
     min-width: 250px;
     align-items: center;
     /* border: 2px solid red; */
+    padding: 10px;
     width: 30%;
-    gap: 0.5rem;
 }
 
 .committee-image {
     height: 10rem;
     width: 10rem;
     object-fit: cover;
-    /* margin-bottom: 0.5rem; */
     border-radius: 50%
 }
 
 .committee-name {
     text-align: center;
-    font-size: 0.9rem;
-    /* border: 2px solid orange; */
+    margin-top: 12px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    /* border: 1px solid yellow; */
 }
 
-.committee-text {
+.committee-uni {
     text-align: center;
     font-size: 0.8rem;
+    font-style: italic;
+    text-wrap: balance;
+    margin-bottom: 12px;
+    /* border: 1px solid yellow; */
+}
+
+.committee-bio {
+    text-align: center;
+    font-size: 0.8rem;
+    text-wrap: pretty;
     /* border: 2px solid yellow; */
 }
 
@@ -593,212 +674,14 @@ a i {
     }
 }
 
-/* Keynote speakers main page*/
-
-.speakers-box-outer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* border: 2px solid blue; */
-    row-gap: 3vw;
-    column-gap: 3vw;
-}
-
-.speakers-item {
-    position: relative;
-    /* border: 2px solid red; */
-    width: 25rem;
-    height: 20rem;
-    
-}
-
-.speakers-image {
-    height: 10rem;
-    width: 10rem;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top:15px;
-}
-
-.speakers-textbox {
-    display: flex;
-    margin-top: 1rem;
-    /* border: 2px solid grey; */
-    row-gap: 0;
-    flex-direction: column
-}
-
-.speakers-name,
-.speakers-position,
-.speakers-uni,
-.speakers-country {
-    text-align: center;
-    margin: 0;
-    font-weight: bold;
-}
-
-.speakers-name {
-    margin-bottom: 3px;
-}
-
-.speakers-position {
-    font-weight: normal;
-    font-size: 0.8rem;
-    font-style: italic;
-}
-
-.speakers-uni {
-    margin-top: 10px;
-    font-size: 0.8rem;
-    margin-bottom: 2px;
-    /* color: green; */
-}
-
-.speakers-country {
-    font-size: 0.75rem;
-    font-weight: normal;
-    /* color: blue; */
-}
-
-.speakers-text {
-    text-align: left;
-    color: #333333;
-    font-size: 0.8rem;
-    font-weight: normal;
-    margin: 1rem;
-    text-wrap: pretty;
-    /* border: 2px solid yellow; */
-}
-
-
-.speakers-card-front {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    background: white;
-    /* dark purple */
-    border: 2px solid #272040;
-    border-radius: 10px;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.speakers-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    background: #ffffff;
-    /* dark purple */
-    color: #272040;
-    text-align: center;
-    border-radius: 10px;
-    /* dark purple */
-    border: 2px solid #272040;
-    opacity: 0;
-    transition: opacity 0.15s ease-in-out;
-}
-
-.speakers-item:hover .speakers-card-front {
-    opacity: 0;
-}
-
-.speakers-item:hover .speakers-card-back {
-    opacity: 1;
-}
-
-
-
-/* @media(max-width:908px) {
-    .speakers-box-outer {
-        flex-direction: column;
-    }
-
-    .speakers-item {
-        width: 100%
-    }
-} */
-
-/*
-@media(max-width:620px) {
-    .speakers-item {
-        width: 65%;
-    }
-
-    .speakers {
-        row-gap: 2.5rem;
-    } 
-}*/
-
-
-/* Keynote speakers detail page */
-.speakers-detail-box-outer {
-    display: flex;
-    justify-content: left;
-    /* border: 2px solid blue; */
-    gap: 2rem;
-}
-
-.speakers-detail-item {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    /* border: 2px solid red; */
-    gap: 1rem;
-    width: 50%
-}
-
-.speakers-detail-image {
-    height: 10rem;
-    width: 10rem;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
-    border-radius: 50%;
-}
-
-.speakers-detail-textbox {
-    display: flex;
-    margin-top: 1rem;
-    /* border:2px solid grey; */
-    gap: 0.5rem;
-    flex-direction: column
-}
-
-.speakers-detail-name {
-    text-align: left;
-    font-size: 0.9rem;
-    /* border: 2px solid orange; */
-}
-
-.speakers-detail-text {
-    text-align: left;
-    font-size: 0.8rem;
-    /* border: 2px solid yellow; */
-}
-
-@media(max-width:908px) {
-    .speakers-detail-box-outer {
-        flex-direction: column;
-    }
-
-    .speakers-detail-item {
-        width: 100%
-    }
-}
-
 /* Sponsors box */
 
 .sponsors-container-borders {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* border: 2px solid black; */
     row-gap: 1rem
+        /* border: 2px solid black; */
 }
 
 .sponsors-box-outer-borders {
@@ -828,7 +711,9 @@ a i {
     display: flex;
     align-items: center;
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 3rem;
+    margin-top: 24px;
+    margin-bottom: 50px;
     /* border: 2px solid black; */
 }
 
@@ -837,8 +722,8 @@ a i {
     flex-wrap: wrap;
     align-items: start;
     justify-content: center;
-    column-gap: 1rem;
-    row-gap: 1rem;
+    column-gap: 4rem;
+    row-gap: 2rem;
     /* border: 2px solid green; */
 }
 
@@ -857,24 +742,20 @@ a i {
 }
 
 .tier1 .sponsorlogo {
-    max-height: 13.2rem;
+    max-height: 10rem;
 }
 
 .tier2 .sponsorlogo {
-    max-height: 9rem;
+    max-height: 5rem;
 }
 
 .tier3 .sponsorlogo {
-    max-height: 6.5rem;
+    max-height: 4rem;
 
 }
 
 .tier4 .sponsorlogo {
-    max-height: 4rem;
-}
-
-.sponsorlogo-4 {
-    max-height: 4rem;
+    max-height: 3.5rem;
 }
 
 
