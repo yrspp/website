@@ -50,27 +50,33 @@
     </nav>
 
     <!-- Title bar -->
-    <div loading="eager" class="header-image-flexbox text-center"
-        style="background-image: url('./assets/seedlings.webp'); background-position: 50% 44%; flex-direction:column; align-items:center">
+    <div loading="eager" class="title-image-flexbox text-center"
+        style="background-image: url('./assets/seedlings.webp'); background-position: 50% 44%">
+
         <div
             style="position: absolute; z-index: 1; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.75);">
         </div>
-        <div class="title-box-outer">
+
+        <div class="container-sm title-box-outer">
+
             <!-- Title bar logo -->
-            <div class="container-sm title-textbox mt-5">
+            <div class="title-textbox">
                 <img src="./assets/YRSPP 2026 logo dark.png" class="title-logo" alt="YRSPP 2026 logo">
             </div>
+
             <!-- Title bar subheader -->
-            <div class="container-sm title-textbox mt-4 mb-4"
-                style="font-family: Magistral; font-weight:900; color: #352D58">
-                <p style="margin:0; font-size: 1.4rem; text-wrap:balance">The Young Researchers' Symposium on Plant
-                    Photobiology</p>
+            <div class="title-textbox"
+                style="margin-top: clamp(2rem, 6vw, 4rem); font-family: Magistral; font-weight:900; color: #352D58">
+                <p
+                    style="margin:0; text-wrap:pretty;  font-size: clamp(1.6rem, 5vw, 2rem); line-height: 120%; text-align:center">
+                    The Young Researchers'<br> Symposium on Plant&nbsp;Photobiology</p>
             </div>
+
             <!-- Title bar date -->
-            <div class="container-sm title-textbox mb-5" style="font-size:0.95rem">
-                <p style="margin:0; text-wrap:balance; color:#352D58 "><b>Wednesday 15<sup>th</sup> to Saturday
-                        18<sup>th</sup> April
-                        2026</b></p>
+            <div class="title-textbox" style="margin-top: 1.1rem;">
+                <p style="margin:0; text-wrap:balance; font-size: clamp(1rem, 3vw, 1.2rem); color:#352D58 ">
+                    <b>Wednesday&nbsp;15<sup>th</sup> to Saturday&nbsp;18<sup>th</sup> April 2026</b>
+                </p>
             </div>
         </div>
     </div>
@@ -146,23 +152,26 @@
         <h1>Keynote speakers</h1>
         <p>We have an exciting lineup of early-career and established keynote speakers this year - read on to learn
             more!</p>
-        <div class="keynote-container">
-            <div class="keynote-box">
 
-                <div class="keynote-item">
+        <div class="keynote profile-container">
+            <div class="profile-box">
+
+                <div class="profile-item">
                     <a href="https://www.bristol.ac.uk/people/person/Keara-Franklin-c03a181e-04d2-490a-8cf1-10cf4a885e17/"
-                        target="_blank"> <img class="keynote-image" src="./assets/kerry-franklin.webp"
-                            alt="Photo of Professor Kerry Franklin" style="object-position: 50% 25%"></a>
-                    <div class="keynote-name"> <a class="underline-btn"
+                        target="_blank" class="profile-image"> <img class="profile-image"
+                            src="./assets/kerry-franklin.webp" alt="Photo of Professor Kerry Franklin"
+                            style="object-position: 50% 25%"></a>
+
+                    <div class="profile-name"> <a class="underline-btn"
                             href="https://www.bristol.ac.uk/people/person/Keara-Franklin-c03a181e-04d2-490a-8cf1-10cf4a885e17/"
                             role="button" target="_blank">Professor Kerry Franklin</a>
                     </div>
-                    <div class="keynote-title">
+                    <div class="profile-subtitle">
                         Professor of Plant Signalling, School of&nbsp;Biological&nbsp;Sciences,
                         University&nbsp;of&nbsp;Bristol, United
                         Kingdom
                     </div>
-                    <div class="keynote-bio">
+                    <div class="profile-bio">
                         Kerry's lab studies how plants integrate light and temperature information to control growth and
                         development. The regulation of stem elongation by light quality and temperature signalling has
                         been a longstanding research focus of her work. More recently, her group has been applying
@@ -173,18 +182,18 @@
                     </div>
                 </div>
 
-                <div class="keynote-item">
-                    <a href="https://www.ceplas.eu/en/research/prof-dr-ute-hoecker/" target="_blank"> <img
-                            class="keynote-image" src="./assets/ute-hoecker.jpeg" alt="Photo of Professor Ute Hoecker"
-                            style="object-position: 50% 32%"></a>
-                    <div class="keynote-name"> <a class="underline-btn"
+                <div class="profile-item">
+                    <a href="https://www.ceplas.eu/en/research/prof-dr-ute-hoecker/" target="_blank"
+                        class="profile-image"> <img class="profile-image" src="./assets/ute-hoecker.jpeg"
+                            alt="Photo of Professor Ute Hoecker" style="object-position: 50% 32%"></a>
+                    <div class="profile-name"> <a class="underline-btn"
                             href="https://www.ceplas.eu/en/research/prof-dr-ute-hoecker" role="button" target="_blank">
                             Professor Ute Hoecker</a>
                     </div>
-                    <div class="keynote-title">
+                    <div class="profile-subtitle">
                         Professor, Institute for Plant Sciences, University of Cologne, Germany
                     </div>
-                    <div class="keynote-bio">
+                    <div class="profile-bio">
                         <a class="underline-btn" href="https://ag-hoecker.botanik.uni-koeln.de" role="button"
                             target="_blank">
                             Ute's group</a> uses <i>Arabidopsis</i> and the moss <i>Physcomitrium patens</i> to
@@ -196,17 +205,17 @@
                     </div>
                 </div>
 
-                <div class="keynote-item">
-                    <a href="https://anr.fr/Project-ANR-21-CE20-0006" target="_blank"> <img class="keynote-image"
-                            src="./assets/anne-sophie-fiorucci.jpeg" alt="Photo of Dr. Anne-Sophie Fiorucci"
-                            style="object-position: 50% 65%"></a>
-                    <div class="keynote-name"> <a class="underline-btn" href="https://anr.fr/Project-ANR-21-CE20-0006"
+                <div class="profile-item">
+                    <a href="https://anr.fr/Project-ANR-21-CE20-0006" class="profile-image" target="_blank"> <img
+                            class="profile-image" src="./assets/anne-sophie-fiorucci.jpeg"
+                            alt="Photo of Dr. Anne-Sophie Fiorucci" style="object-position: 50% 65%"></a>
+                    <div class="profile-name"> <a class="underline-btn" href="https://anr.fr/Project-ANR-21-CE20-0006"
                             role="button" target="_blank"> Dr. Anne-Sophie Fiorucci</a>
                     </div>
-                    <div class="keynote-title">
+                    <div class="profile-subtitle">
                         Assistant Professor, Institute for Integrative Biology of the Cell&nbsp;(I2BC),
                         Université&nbsp;Paris-Saclay, France </div>
-                    <div class="keynote-bio">
+                    <div class="profile-bio">
                         Anne-Sophie studied the regulation of gene induction by light in plants via chromatin
                         mechanisms
                         during her PhD (Paris, France). She then went to Lausanne (Switzerland) for her post-doc where
@@ -216,19 +225,19 @@
                     </div>
                 </div>
 
-                <div class="keynote-item">
-                    <a href="https://www.wur.nl/en/persons/charlotte-gommers.htm" target="_blank"> <img
-                            class="keynote-image" src="./assets/charlotte-gommers.jpeg"
+                <div class="profile-item">
+                    <a href="https://www.wur.nl/en/persons/charlotte-gommers.htm" class="profile-image" target="_blank">
+                        <img class="profile-image" src="./assets/charlotte-gommers.jpeg"
                             alt="Photo of Dr. Charlotte Gommers" style="object-position: 50% 44%"></a>
-                    <div class="keynote-name"> <a class="underline-btn"
+                    <div class="profile-name"> <a class="underline-btn"
                             href="https://www.wur.nl/en/persons/charlotte-gommers.htm" role="button" target="_blank">
                             Dr. Charlotte (Lot) Gommers</a>
                     </div>
-                    <div class="keynote-title">
+                    <div class="profile-subtitle">
                         Assistant Professor, Laboratory&nbsp;of&nbsp;Plant&nbsp;Physiology, Wageningen&nbsp;University,
                         Netherlands
                     </div>
-                    <div class="keynote-bio">
+                    <div class="profile-bio">
                         <a class="keynote-website underline-text" href="https://www.charlottegommers.nl/" role="button"
                             target="_blank"> Lot's
                             group</a> investigates how chloroplasts contribute to the perception of and
@@ -242,18 +251,18 @@
                     </div>
                 </div>
 
-                <div class="keynote-item">
-                    <a href="https://webs.uab.cat/pleelab/" target="_blank"> <img class="keynote-image"
-                            src="./assets/jordi-moreno-romero.jpg" alt="Photo of Dr. Jordi Moreno-Romero"
-                            style="object-position: 50% 30%"></a>
-                    <div class="keynote-name"> <a class="underline-btn" href="https://webs.uab.cat/pleelab/"
+                <div class="profile-item">
+                    <a href="https://webs.uab.cat/pleelab/" class="profile-image" target="_blank"> <img
+                            class="profile-image" src="./assets/jordi-moreno-romero.jpg"
+                            alt="Photo of Dr. Jordi Moreno-Romero" style="object-position: 50% 30%"></a>
+                    <div class="profile-name"> <a class="underline-btn" href="https://webs.uab.cat/pleelab/"
                             role="button" target="_blank">Dr. Jordi Moreno-Romero</a>
                     </div>
-                    <div class="keynote-title">
+                    <div class="profile-subtitle">
                         Ramón y Cajal Researcher, Department&nbsp;of Biochemistry and Molecular
                         Biology, Universitat&nbsp;Autònoma&nbsp;de&nbsp;Barcelona&nbsp;(UAB), Spain
                     </div>
-                    <div class="keynote-bio">
+                    <div class="profile-bio">
                         Jordi is a plant molecular biologist focused on plant epigenetics. For his PhD he studied the
                         roles of the ubiquitous protein kinase CK2 in plants. He then went on to study genomic
                         imprinting and later explored how epigenetic mechanisms modulate plant responses to shade. His
@@ -263,20 +272,20 @@
                     </div>
                 </div>
 
-                <div class="keynote-item">
-                    <a href="https://www.synthetic-biology.hhu.de/research/urquiza-group" target="_blank"> <img
-                            class="keynote-image" src="./assets/uriel-urquiza-garcia.jpeg"
+                <div class="profile-item">
+                    <a href="https://www.synthetic-biology.hhu.de/research/urquiza-group" class="profile-image"
+                        target="_blank"> <img class="profile-image" src="./assets/uriel-urquiza-garcia.jpeg"
                             alt="Photo of Dr. Uriel Urquiza-García" style="object-position: 50% 10%"></a>
-                    <div class="keynote-name"> <a class="underline-btn"
+                    <div class="profile-name"> <a class="underline-btn"
                             href="https://www.synthetic-biology.hhu.de/research/urquiza-group" role="button"
                             target="_blank">
                             Dr. Uriel Urquiza-García</a>
                     </div>
-                    <div class="keynote-title">
+                    <div class="profile-subtitle">
                         Group Leader, Institute of Synthetic Biology, Cluster of Excellence on Plant Sciences (CEPLAS),
                         Heinrich Heine University of Düsseldorf, Germany
                     </div>
-                    <div class="keynote-bio">
+                    <div class="profile-bio">
                         Uriel's work focuses on how plants perceive and integrate signals from light, temperature, and
                         circadian time. During his Ph.D. studies, he employed experimental and computational methods to
                         quantitatively analyse the plant circadian clock. He then began using synthetic biology to
