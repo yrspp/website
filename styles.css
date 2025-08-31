@@ -175,8 +175,8 @@ figcaption {
     justify-content: center;
     z-index: 2;
     /* height: 35rem; */
-    height: min(35rem, 70vh);
-    min-height: 25rem;
+    height: min(36rem, 95vw);
+    min-height: 30rem;
 }
 
 .title-logo {
