@@ -498,24 +498,24 @@ a i {
 }
 
 /* Custom breakpoint: expand above 800px, collapse below 800px */
-@media (min-width: 800px) {
-    .navbar-expand-800 .navbar-toggler {
+@media (min-width: 850px) {
+    .navbar-expand-custom .navbar-toggler {
         display: none;
     }
 
-    .navbar-expand-800 .navbar-collapse {
+    .navbar-expand-custom .navbar-collapse {
         display: flex !important;
         flex-basis: auto;
     }
 
     /* Make the nav items horizontal, as in a standard expanded navbar */
-    .navbar-expand-800 .navbar-nav {
+    .navbar-expand-custom .navbar-nav {
         flex-direction: row;
         align-items: center;
     }
 
     /* Optional: spacing between links */
-    .navbar-expand-800 .navbar-nav .nav-item {
+    .navbar-expand-custom .navbar-nav .nav-item {
         margin-left: 1rem;
     }
 }
