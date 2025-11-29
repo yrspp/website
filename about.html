@@ -37,6 +37,8 @@
                 <li class="nav-item"><a class="nav-link" href="/venue">Venue</a></li>
                 <li class="nav-item"><a class="nav-link" href="/programme">Programme</a></li>
                 <li class="nav-item"><a class="nav-link" href="/sponsors">Sponsors</a></li>
+                <li class="nav-item"><a class="nav-link" href="/sponsors">Registration</a></li>
+
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li><a class="btn navbar-btn" href="/register" role="button">Register</a></li>
@@ -44,11 +46,9 @@
         </div>
     </nav>
 
-    <!-- Update bar -->
+    <!-- GREEN BANNER -->
     <div class="update-bar">
-        <p style="    text-wrap: balance">Preliminary <a class=underline-text-light href="/programme">programme</a> now
-            available | <a class=underline-text-light href="/register">Registration</a> opens November 2025
-        </p>
+        <p style="text-wrap: balance"> <a class=underline-text-light href="/register">Registration is now OPEN!</a></p>
     </div>
 
     <!-- Header image - adjust background image position using 2nd percentage -->
@@ -80,86 +80,83 @@
 
         <div class="row d-flex align-items-start ">
 
-            <!-- Text Column -->
-            <div class="col-md-5">
-                <h3>Our speakers</h3>
-                <p>As well as a host of presentations by our ECRs, YRSPP 2026 will feature keynote presentations
-                    by four newly appointed assistant professors and two established photobiologists. </p>
-                <p> These speakers will provide insight into a range of successful academic
-                    trajectories, providing career inspiration and helping our attendees build valuable research
-                    connections throughout the event.
-                </p>
-            </div>
+            <div class="text-flexbox">
+                <!-- Text Column -->
+                <div>
+                    <h3>Our speakers</h3>
+                    <p>As well as a host of presentations by our ECRs, YRSPP 2026 will feature keynote presentations
+                        by four newly appointed assistant professors and two established photobiologists.</p>
+                    <p>These speakers will provide insight into a range of successful academic
+                        trajectories, providing career inspiration and helping our attendees build valuable research
+                        connections throughout the event.
+                    </p>
+                </div>
 
-            <!-- Carousel Column -->
-            <div class="col-md-7 text-center">
-                <div id="speakerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-                    <div class="carousel-inner">
-                        <!-- First Image -->
-                        <div class="carousel-item active">
-                            <figure>
-                                <img src="./assets/keynote-speaker-karen-halliday.webp"
-                                    class="d-block w-100 image-rounded" alt="Professor Karen Halliday">
-                                <figcaption>2024 Keynote: Prof. Karen Halliday</figcaption>
-                            </figure>
+                <!-- Carousel Column -->
+                <div class="text-center">
+                    <div id="speakerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <figure>
+                                    <img src="./assets/keynote-speaker-karen-halliday.webp"
+                                        class="d-block w-100 image-rounded" alt="Professor Karen Halliday">
+                                    <figcaption>2024 Keynote: Prof. Karen Halliday</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="./assets/keynote-speaker-ronald-pierik.webp"
+                                        class="d-block w-100 image-rounded" alt="Professor Ronald Pierik">
+                                    <figcaption>2024 Keynote: Prof. Ronald Pierik</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="./assets/keynote-speaker-kasper-van-gelderen.webp"
+                                        class="d-block w-100 image-rounded" alt="Dr. Kasper van Gelderen">
+                                    <figcaption>2024 Young PI: Dr. Kasper van Gelderen</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="./assets/keynote-speaker-martin-balcerowicz.webp"
+                                        class="d-block w-100 image-rounded" alt="Dr. Martin Balcerowicz">
+                                    <figcaption>2024 Young PI: Dr. Martin Balcerowicz</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="./assets/keynote-speaker-johanna-krahmer.webp"
+                                        class="d-block w-100 image-rounded" alt="Dr. Johanna Krahmer">
+                                    <figcaption>2024 Young PI: Dr. Johanna Krahmer</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="./assets/keynote-speaker-andres-romanowski.webp"
+                                        class="d-block w-100 image-rounded" style="object-position: 50% 65%"
+                                        alt="Dr. Andrés Romanowski">
+                                    <figcaption>2024 Young PI: Dr. Andrés Romanowski</figcaption>
+                                </figure>
+                            </div>
                         </div>
-                        <!-- Second Image -->
-                        <div class="carousel-item">
-                            <figure>
-                                <img src="./assets/keynote-speaker-ronald-pierik.webp"
-                                    class="d-block w-100 image-rounded" alt="Professor Ronald Pierik">
-                                <figcaption>2024 Keynote: Prof. Ronald Pierik</figcaption>
-                            </figure>
-                        </div>
-                        <!-- Third Image -->
-                        <div class="carousel-item">
-                            <figure>
-                                <img src="./assets/keynote-speaker-kasper-van-gelderen.webp"
-                                    class="d-block w-100 image-rounded" alt="Speaker Image 3">
-                                <figcaption>2024 Young PI: Dr. Kasper van Gelderen</figcaption>
-                            </figure>
-                        </div>
-                        <!-- Fourth Image -->
-                        <div class="carousel-item">
-                            <figure>
-                                <img src="./assets/keynote-speaker-martin-balcerowicz.webp"
-                                    class="d-block w-100 image-rounded" alt="Speaker Image 3">
-                                <figcaption>2024 Young PI: Dr. Martin Balcerowicz</figcaption>
-                            </figure>
-                        </div>
-                        <!-- Fifth Image -->
-                        <div class="carousel-item">
-                            <figure>
-                                <img src="./assets/keynote-speaker-johanna-krahmer.webp"
-                                    class="d-block w-100 image-rounded" alt="Speaker Image 3">
-                                <figcaption>2024 Young PI: Dr. Johanna Krahmer</figcaption>
-                            </figure>
-                        </div>
-                        <!-- Sixth Image -->
-                        <div class="carousel-item">
-                            <figure>
-                                <img src="./assets/keynote-speaker-andres-romanowski.webp"
-                                    class="d-block w-100 image-rounded" style="object-position: 50% 65%"
-                                    alt="Speaker Image 3">
-                                <figcaption>2024 Young PI: Dr. Andrés Romanowski</figcaption>
-                            </figure>
-                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#speakerCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#speakerCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-
-                    <!-- Carousel Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#speakerCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#speakerCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
         </div>
+
 
         <h3 class="mt-2">Societal and scientific impact</h3>
 
@@ -173,15 +170,19 @@
             international research community, helping them develop the foundational research connections that
             drive innovation, groundbreaking discoveries, and sustainable solutions to pressing global challenges.
 
-            By engaging senior researchers and assistant professors, YRSPP demonstrates its commitment to mentorship and
+            By engaging senior researchers and assistant professors, YRSPP demonstrates its commitment to mentorship
+            and
             knowledge transfer, equipping early-career investigators with the connections and skills
             to make a lasting impact on plant photobiology research on a global scale. </p>
 
-        <h1>YRSPP's history (and&nbsp;future!)</h1>
+        <h1 id="history" style="scroll-margin-top: 100px;">YRSPP's history (and&nbsp;future!)</h1>
 
-        <p>The Young Researchers' Symposium on Plant Photobiology originated in 2018 in a conference centre elevator in
-            Matsue, Japan, where frustrated PhD students discussed the limited involvement of young scientists in the
-            significant International Symposium on Plant Photobiology (ISPP). They decided to take action, and laid the
+        <p>The Young Researchers' Symposium on Plant Photobiology originated in 2018 in a conference centre elevator
+            in
+            Matsue, Japan, where frustrated PhD students discussed the limited involvement of young scientists in
+            the
+            significant International Symposium on Plant Photobiology (ISPP). They decided to take action, and laid
+            the
             foundation for a highly successful ongoing symposium.
         </p>
 
@@ -196,7 +197,8 @@
                     </p>
                     <div class="timeline-circle"></div>
                     <p class="timeline-text"><b>The inaugural symposium: </b> The first YRSPP was organised
-                        later the same year, attracting more than 50 early-career researchers (who presented 26 talks
+                        later the same year, attracting more than 50 early-career researchers (who presented 26
+                        talks
                         and 49
                         posters) and highlighting the strong demand for such an event.
                     </p>
@@ -207,7 +209,8 @@
                         <i>March 2022</i>
                     </p>
                     <div class="timeline-circle"></div>
-                    <p class="timeline-text"><b>Replicating success online:</b> The second YRSPP adapted wonderfully to
+                    <p class="timeline-text"><b>Replicating success online:</b> The second YRSPP adapted wonderfully
+                        to
                         an online environment (<a class="underline-btn" target="_blank"
                             href="https://www.cibss.uni-freiburg.de/news/quenching-the-thirst-for-fruitful-exchanges"
                             role="button">read about it here</a>), hosting 21 talks and 43
@@ -239,23 +242,25 @@
             </div>
         </div>
 
-        <h2 id="organise" style="scroll-margin-top: 100px"> Could you help out with the next&nbsp;YRSPP?</h2>
-        <p>If you have any suggestions for the 2028 symposium (such as keynote speakers or a great location) or would
-            like to find out more about helping organise the event, please reach out to us and we will be happy to
-            answer all your questions.</p>
+        <h2 id="organise" style="scroll-margin-top: 100px"> Do you have suggestions for the next&nbsp;YRSPP?</h2>
+        <p>If you'd like to help shape future symposia (such as by suggesting keynote speakers or a great location) or
+            want to learn more about helping organise the event, please send us an email!</p>
 
-        <p>Some of the tasks available include selecting keynote speakers, choosing a suitable venue, advertising for
-            sponsors, managing the YRSPP website and social media, and scheduling and running the event itself - get in
-            touch if you could help with any of these!</p>
+        <p>As part of the YRSPP team, you'll form strong professional connections with esteemed academics and big-name
+            industrial partners while developing great project/event management and communication skills (which will
+            look amazing on your CV).</p>
 
-        <p>By joining the team, you'll develop great project/event management and communication skills (perfect for the
-            CV) and get to form strong networks with both academic and industrial partners, while helping organise this
-            fantastic event.</p>
+        <p>Some of the tasks you could help with include selecting keynote speakers, choosing a venue, communicating
+            with
+            sponsors, managing the YRSPP website and social media, and scheduling and running the event itself - email
+            us to get involved!</p>
 
 
         <div class="text-center">
-            <a class="btn custom-btn-light" href="mailto:yrspp.mail@gmail.com" role="button">Email YRSPP</a>
+            <a class="btn custom-btn underline-btn" href="mailto:yrspp.mail@gmail.com"
+                role="button">yrspp.mail@gmail.com</a>
         </div>
+
 
         <h1 id="committee" class="mb-5">Organising committee for YRSPP 2026</h1>
 
@@ -310,8 +315,10 @@
                     </div>
                     <div class="profile-bio">
                         Ira is a PhD student in <a class="underline-btn" href="https://ag-hoecker.botanik.uni-koeln.de/"
-                            role="button" target="_blank">Ute Hoecker's lab</a>, where she investigates how
-                        photoreceptor interaction with SPA1 leads to the inactivation of the COP1/SPA complex, promoting
+                            role="button" target="_blank">Ute
+                            Hoecker's lab</a>, where she investigates how
+                        photoreceptor interaction with SPA1 leads to the inactivation of the COP1/SPA complex,
+                        promoting
                         photomorphogenesis.
                     </div>
                 </div>

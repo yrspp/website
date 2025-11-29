@@ -169,13 +169,6 @@ figcaption {
     }
 }
 
-/* When screen size is 600px or smaller */
-@media (max-width: 767px) {
-    .img-fluid {
-        max-width: 80%;
-    }
-
-}
 
 /* Page header bars  */
 
@@ -190,10 +183,21 @@ figcaption {
 }
 
 .title-image-flexbox {
-    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* fill viewport minus navbar height */
+height: calc(100vh - 60px - 40px); /* navbar + green banner */
+    width: 100%;
+    background-image: url('./assets/seedlings.webp');
     background-size: cover;
-    /* border: solid orange 2px */
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 .white-overlay {
     position: absolute;
@@ -287,19 +291,23 @@ figcaption {
 .text-flexbox {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Create 2 equal-width columns */
+    /* 2 columns */
     column-gap: 40px;
 }
 
-@media (max-width: 576px) {
+/* Switch to 1 column when screen <= 800px */
+@media (max-width: 1000px) {
     .text-flexbox {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        /* single column */
     }
 
     .img-fluid {
-        max-width: 95%;
+        width: 100%;
+        max-width:500px;
     }
 }
+
 
 /* button flexbox */
 
@@ -333,6 +341,7 @@ a i {
     margin-bottom: 1rem;
 }
 
+
 .custom-btn {
     /* bright purple */
     background-color: #3F3669;
@@ -360,6 +369,18 @@ a i {
     /* bright purple */
     border: 1px solid #3F3669;
     color: white;
+}
+
+.custom-btn.register {
+    background-color: #3B8C41;
+    padding: 8px 20px 8px 20px;
+    border-radius: 10px;
+    ;
+    font-size: 25px;
+}
+
+.custom-btn.register:hover {
+    background-color: #006A08;
 }
 
 .underline-text,
@@ -406,16 +427,16 @@ a i {
 }
 
 .navbar-btn {
-    /* bright purple */
-    background-color: #3F3669;
+    background-color: #3B8C41;
     color: white;
     border: none;
     /* font-size: 0.9rem; */
+    font-weight: bold;
     /* border: solid yellow 1.5pt; */
 }
 
 .navbar-btn:hover {
-    background-color: #3B8C41;
+    background-color: #006A08;
     color: white
 }
 
@@ -460,6 +481,11 @@ a i {
     /* border: solid blue 1pt; */
 }
 
+.background-image {
+    background-size: cover;
+    background-position: center;
+}
+
 .navbar-toggler-custom .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath stroke='%23352D58' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     /* transition: all 0.3s ease-in-out; */
@@ -469,6 +495,45 @@ a i {
 
 .navbar-toggler-custom.open .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath stroke='%23352D58' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M6 6L26 26M26 6L6 26'/%3E%3C/svg%3E");
+}
+
+/* Custom breakpoint: expand above 800px, collapse below 800px */
+@media (min-width: 800px) {
+    .navbar-expand-800 .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-expand-800 .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    /* Make the nav items horizontal, as in a standard expanded navbar */
+    .navbar-expand-800 .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Optional: spacing between links */
+    .navbar-expand-800 .navbar-nav .nav-item {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 799.98px) {
+    .navbar-expand-800 .navbar-collapse {
+        display: none;
+        /* collapsed */
+    }
+
+    .navbar-expand-800 .navbar-collapse.show {
+        display: block;
+    }
+
+    /* On mobile keep column layout */
+    .navbar-expand-800 .navbar-nav {
+        flex-direction: column;
+    }
 }
 
 
@@ -484,16 +549,6 @@ a i {
     width: 100%;
     height: 2.5rem;
 }
-
-/* Social media box */
-
-/* .socials-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    border: 2px solid black;
-} */
 
 .icon-container {
     display: grid;
@@ -749,32 +804,8 @@ a i {
         width: 90%;
         row-gap: 2.5rem
     }
-
-    /* 
-      .tier0 .sponsorlogo {
-        width: 80vw;
-    }
-    .tier1 .sponsorlogo {
-        width: 60vw;
-    }
-
-    .tier2 .sponsorlogo {
-        width: 60vw;
-    }
-
-    .tier3 .sponsorlogo {
-        max-height: 7rem;
-        width: 50vw;
-    }
-
-    .tier4 .sponsorlogo {
-        max-height: 5rem;
-        width: 50vw;
-    } */
-
 }
 
-/* Media when phone size make tier 1 and 2 green box smaller. Set width to be equal width:80% Also switch on wrapping for tier 0. */
 /* Timeline */
 
 .timeline-flexbox {
@@ -989,7 +1020,8 @@ col:nth-child(4) {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    padding: 15px 0 0 25px; /* top right bottom left */
+    padding: 15px 0 0 25px;
+    /* top right bottom left */
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.35s ease;
@@ -998,7 +1030,8 @@ col:nth-child(4) {
 }
 
 .dropdown[open] .writtenbox {
-    max-height: 1000px; /* adjust if your tallest box is bigger */
+    max-height: 1000px;
+    /* adjust if your tallest box is bigger */
 }
 
 
