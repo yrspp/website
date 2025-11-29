@@ -498,7 +498,7 @@ a i {
 }
 
 /* Custom breakpoint: expand above 800px, collapse below 800px */
-@media (min-width: 850px) {
+@media (min-width: 900px) {
     .navbar-expand-custom .navbar-toggler {
         display: none;
     }
@@ -521,17 +521,17 @@ a i {
 }
 
 @media (max-width: 799.98px) {
-    .navbar-expand-800 .navbar-collapse {
+    .navbar-expand-custom .navbar-collapse {
         display: none;
         /* collapsed */
     }
 
-    .navbar-expand-800 .navbar-collapse.show {
+    .navbar-expand-custom .navbar-collapse.show {
         display: block;
     }
 
     /* On mobile keep column layout */
-    .navbar-expand-800 .navbar-nav {
+    .navbar-expand-custom .navbar-nav {
         flex-direction: column;
     }
 }
