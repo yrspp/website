@@ -738,8 +738,8 @@ a i {
     align-items: center;
     flex-direction: column;
     row-gap: 6vh;
-    margin-top: 24px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     /* border: 2px solid black; */
 }
 
